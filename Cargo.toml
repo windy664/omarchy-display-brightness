@@ -1,0 +1,20 @@
+[package]
+name = "omarchy-display-brightness"
+version = "0.1.0"
+edition = "2024"
+description = "Display brightness for Omarchy that falls back to software dimming when DDC is unavailable"
+license = "MIT"
+repository = "https://github.com/windy664/omarchy-display-brightness"
+keywords = ["omarchy", "hyprland", "brightness", "ddc", "linux"]
+categories = ["command-line-utilities"]
+
+# The binary keeps the name the keybindings already use.
+[[bin]]
+name = "display-brightness"
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.release]
+strip = true
+lto = true
